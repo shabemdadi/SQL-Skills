@@ -27,7 +27,7 @@
 
 -- 7. Select the **name** of any and all car brands that are not discontinued.
 
-    SELECT brands.name FROM Brands LEFT JOIN Models ON brands.name = brand_name WHERE discontinued IS NULL GROUP BY brand_name;
+    SELECT name FROM Brands WHERE discontinued IS NULL GROUP BY brand_name;
 
 -- 8. Select rows 15-25 of the DB in alphabetical order by model name.
 
@@ -69,6 +69,9 @@
 
 -- followup question: In your own words, describe the difference between 
 -- left joins and inner joins.
+
+    -- Inner joins look for a match between BOTH tables and will only include rows with that match, whereas left joins take the first table as a base, and 
+    --add on information from the other table based upon matching with the first table. 
 
 -- 3. Modify the query so that it only selects brands that don't have any car models in the cars table. 
 -- (Hint: it should only show Tesla's row.)
